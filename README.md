@@ -1,5 +1,5 @@
 citizeninn
 ==========
-test remote merge
+demo merge
 test change on the server
 
