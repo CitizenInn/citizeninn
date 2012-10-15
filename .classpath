@@ -22,5 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/media/UserData/Users/borys_000/Downloads/hibernate-release-4.1.7.Final/hibernate-release-4.1.7.Final/lib/required/hibernate-core-4.1.7.Final.jar"/>
+	<classpathentry kind="lib" path="/media/UserData/Users/borys_000/Downloads/hibernate-release-4.1.7.Final/hibernate-release-4.1.7.Final/lib/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
