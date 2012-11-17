@@ -1,7 +1,5 @@
 package org.citizeninn;
 
-import java.util.Locale.Category;
-
 import javax.persistence.*;
 
 
