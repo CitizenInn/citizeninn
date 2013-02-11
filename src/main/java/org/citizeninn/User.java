@@ -6,6 +6,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "USERS")
 public class User {
+
+    private gender;
 	
 	private String firstName;
 
