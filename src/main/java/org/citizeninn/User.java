@@ -1,13 +1,12 @@
 package org.citizeninn;
 
-import javax.persistence.*;
 
 
-@Entity
-@Table(name = "USERS")
+/*@Entity
+@Table(name = "USERS")*/
 public class User {
 
-    private gender;
+    private short gender;
 	
 	private String firstName;
 
@@ -31,9 +30,7 @@ public class User {
 		
 	private Long id;
 
-	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
-	@Column(name = "ID")
+
 	public Long getId() {
 		return id;
 	}
