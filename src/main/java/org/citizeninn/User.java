@@ -34,13 +34,13 @@ public class User {
 		this.firstName = firstName;
 	}
 
-	private short gender;
+	private int gender;
 
-	public short getGender() {
+	public int getGender() {
 		return gender;
 	}
 
-	public void setGender(short gender) {
+	public void setGender(int gender) {
 		this.gender = gender;
 	}
 
