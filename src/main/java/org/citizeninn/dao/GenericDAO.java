@@ -13,7 +13,7 @@ public interface GenericDAO<T, ID extends Serializable> {
 
 	T makePersistent(T entity);
 
-	void makeTransient();
+	void makeTransient(T entity);
 
 	void flush();
 
