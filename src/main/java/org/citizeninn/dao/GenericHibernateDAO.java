@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.LockOptions;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 
 public abstract class GenericHibernateDAO<T, ID extends Serializable>
@@ -50,7 +51,12 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
 
 	@Override
 	public T makePersistent(T entity) {
-		getSession().saveOrUpdate(entity);
+
+		Session session = getSession();
+
+		Transaction trans = session.beginTransaction();
+		session.saveOrUpdate(entity);
+		trans.commit();
 		return entity;
 	}
 
@@ -89,7 +95,12 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
 
 	protected Session getSession() {
 		if (session == null) {
-			session = HibernateUtil.sessionFactory.getCurrentSession();
+			try {
+				session = HibernateUtil.getSessionFactory().getCurrentSession();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return session;
 	}
